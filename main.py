@@ -4,14 +4,38 @@ See problemset-01.pdf for details.
 """
 # no imports needed.
 
-def foo(x):
-    ### TODO
-    pass
+def foo(a, b):
+    if a==0:
+        return b
+    elif b==0:
+        return a
+    else:
+        x, y = (min(a,b), max(a,b))
+        return foo(y, y % x)
+    #
+#
 
 def longest_run(mylist, key):
-    ### TODO
-    pass
-
+    """
+    Input:
+        `myarray`: a list of ints
+        `key`: an int
+    Return:
+        the longest continuous sequence of `key` in `myarray`
+    """
+    
+    seq_count = 0
+    key_count = 0
+    for val in mylist: 
+        if val==key:
+            key_count += 1
+        else:
+            seq_count = max(seq_count, key_count)
+            key_count = 0
+        #
+    #
+    return seq_count
+#
 
 class Result:
     """ done """
@@ -28,13 +52,33 @@ class Result:
         return('longest_size=%d left_size=%d right_size=%d is_entire_range=%s' %
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
     
-    
+# should this be parallelizable?
 def longest_run_recursive(mylist, key):
-    ### TODO
-    pass
+    # TODO
+    print('sequencing %s' % mylist)
+    if len(mylist)==1:
+        return mylist
+    else:
+        # seq_count = Result(0, 0, 0, False)
+
+        # if longest_run_recursive(mylist[len(mylist)//2:], key)==key:
+        #     print(key)
+
+        # if mylist[0]==key:
+        #     seq_count.left_size += 1
+        # man idek anymore
+
+        # seq_count.right_size += longest_run_recursive(mylist[len(mylist)//2:], key)
+        # L_s, R_s = [longest_run_recursive(mylist[len(mylist)//2:], key), longest_run_recursive(mylist[:len(mylist)//2], key)]
+        # longest_run_recursive(mylist[:len(mylist)//2], key) + longest_run_recursive(mylist[len(mylist)//2:], key)
+
+        return 
+    #
+#
+print(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12))
 
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
-
-
+#
+# test_longest_run()
