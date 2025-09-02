@@ -44,30 +44,36 @@ Place all written answers from `assignment-01.md` here for easier grading.
     - Thus, $\sqrt{n} \in \mathcal{\Omega}(\log^3{n})$.
   <br>
 
-  - 1g. Assume $\mathcal{o}(g(n)) \cap \mathcal{\Omega}(g(n)) \neq \mathcal{\empty}$ 
+  - 1g. Assume $\mathcal{o}(g(n)) \cap \mathcal{\omega}(g(n)) \neq \mathcal{\empty}$ 
     - $\mathcal{o}(g(n)) \coloneqq f(n) < cg(n), c>0, n_0>0$
     - $\mathcal{\omega}(g(n)) \coloneqq f(n) > cg(n), c>0, n_0>0$
     - $cg(n) < f(n) < cg(n)$ which cannot be true.
-    - As $n \rightarrow \infty$, $f(n)$ cannot be both less than $cg(n)$ and greater than $cg(n)$. Therefore, $\mathcal{o}(g(n)) \cap \mathcal{\Omega}(g(n)) = \mathcal{\empty}$
+    - As $n \rightarrow \infty$, $f(n)$ cannot be both less than $cg(n)$ and greater than $cg(n)$. Therefore, $\mathcal{o}(g(n)) \cap \mathcal{\omega}(g(n)) = \mathcal{\empty}$
 
 2. **SPARC to Python**
 
   - 2b. It does a remainder calculation but seems to always return the maximum out of the two inputs given.
 
+  - 2c.
+    - $W(n)$
+      - Branching factor is $a\%b$
+      - So $W(n) = \mathcal{O}(\log_{a\%b}n)$, where $n$ would the size of a and b? 
+    - No parallization so $S(n)$ would be the same as $W(n)  = \mathcal{O}(\log_{a\%b}n)$
+
 3. **Parallelism and recursion**
 *The superscripts refer to the lines of code in `main.py`!*
 
-  - 3b. 
-    - $W = c_{30}n + c_{31}n + c_{33}n + c_{34}n + c_{35}n + c_{38} = \mathcal{O}(n)$
-    - No parallelization so $S = \mathcal{O}(n)$
-  <br>
-
-  - 3d.
+  - 3b. TODO: CHECK
     - $W = \mathcal{O}(n)$
     - No parallelization so $S = \mathcal{O}(n)$
   <br>
 
-  - 3e.
+  - 3d. TODO: CHECK
+    - $W = \mathcal{O}(n)$
+    - No parallelization so $S = \mathcal{O}(n)$
+  <br>
+
+  - 3e. TODO: CHECK
     - $W = \mathcal{O}(n)$
     - $S = \mathcal{O}(\log{n})$
   
