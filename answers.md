@@ -74,13 +74,13 @@ Place all written answers from `assignment-01.md` here for easier grading.
     - No parallelization so $S = \mathcal{O}(n)$
   <br>
 
-  - 3d. TODO: CHECK
-    - $W = \mathcal{O}(n)$
-    - No parallelization so $S = \mathcal{O}(n)$
+  - 3d.
+    - $W(n) = \mathcal{O}(n)$
+    - No parallelization so $S(n) = \mathcal{O}(n)$
   <br>
 
-  - 3e. TODO: CHECK
-    - $W = \mathcal{O}(n)$
-    - $S = \mathcal{O}(\log{n})$
+  - 3e.
+    - $W(n) = \mathcal{O}(n)$
+    - $S(n) = \mathcal{O}(\log_2{n})$
   
 4. **GCD**

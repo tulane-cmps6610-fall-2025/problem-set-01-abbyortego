@@ -68,28 +68,8 @@ def longest_run_recursive(mylist, key):
             seq_count.left_size += 1
         if longest_run_recursive(mylist[len(mylist)//2:], key)==key:
             seq_count.right_size += 1
-        return max(seq_count.left_size, seq_count.right_size)
-
-        # print(longest_run_recursive(mylist[:len(mylist)//2], key)==key)
-        # print(longest_run_recursive(mylist[len(mylist)//2:], key)==key)
-
-        # # if longest_run_recursive(mylist[:len(mylist)//2], key) == longest_run_recursive(mylist[len(mylist)//2:], key):
-        # #     return "huh"                                                                       
-
-        # seq_count.left_size += longest_run_recursive(mylist[:len(mylist)//2], key)
-        # seq_count.right_size += longest_run_recursive(mylist[len(mylist)//2:], key)
-        # return max(seq_count.left_size, seq_count.right_size)
-
-        # if longest_run_recursive(mylist[len(mylist)//2:], key)==key:
-        #     print(key)
-
-        # if mylist[0]==key:
-        #     seq_count.left_size += 1
-        # man idek anymore
-
-        # seq_count.right_size += longest_run_recursive(mylist[len(mylist)//2:], key)
-        # L_s, R_s = [longest_run_recursive(mylist[len(mylist)//2:], key), longest_run_recursive(mylist[:len(mylist)//2], key)]
-        # longest_run_recursive(mylist[:len(mylist)//2], key) + longest_run_recursive(mylist[len(mylist)//2:], key)
+        seq_count.longest_size = max(seq_count.left_size, seq_count.right_size)
+        return seq_count.longest_size
     #
 #
 print(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12))
