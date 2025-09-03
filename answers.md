@@ -22,6 +22,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
  
   - 1c. $n^{1.01} \in \mathcal{O}(\log^2{n})$  iff there exists $c>0, n_0>0$ such that $n^{1.01} \leq \log^2{n}$ $\forall n>n_0$
     - $n^{1.01} \leq c\log^2{n}$
+    - $\frac{n^{1.01}}{\log^2{n}} \leq c$
+    - Using L'Hopital's rule, $\lim_{n \rightarrow \infty} \frac{n^{1.01}}{\log^2{n}} = \infty$
+    - Thus, $n^{1.01} \not\in \mathcal{O}(\log^2{n})$
   <br>
 
   - 1d. $n^{1.01} \in \mathcal{\Omega}(\log^2{n})$ iff there exists $c>0, n_0>0$ such that $n^{1.01} \geq \log^2{n}$ $\forall n>n_0$
@@ -34,6 +37,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
   - 1e. $\sqrt{n} \in \mathcal{O}(\log^3{n}) \texttt{ iff } \exists$ $c>0, n_0>0 \ni \sqrt{n} \leq \log^3{n}$ $\forall n>n_0$
     - $\sqrt{n} \leq c\log^3{n}$
+    - $\frac{n^{1/2}}{\log^3{n}} \leq c$
+    - Using L'Hopital's rule, $\lim_{n \rightarrow \infty} \frac{n^{1/2}}{\log^3{n}} = \infty$
+    - Thus, $\sqrt{n} \not\in \mathcal{O}(\log^3{n})$
   <br>
 
   - 1f. $\sqrt{n} \in \mathcal{\Omega}(\log^3{n})$ iff there exists $c>0, n_0>0$ such that $\sqrt{n} \geq \log^3{n}$ $\forall n>n_0$
