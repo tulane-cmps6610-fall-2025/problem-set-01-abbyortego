@@ -69,8 +69,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
 3. **Parallelism and recursion**
 *The superscripts refer to the lines of code in `main.py`!*
 
-  - 3b. TODO: CHECK
-    - $W = \mathcal{O}(n)$
+  - 3b.
+    - $W(n) = c_{29}n + c_{32}n + c_{34}n = \mathcal{O}(n)$
     - No parallelization so $S = \mathcal{O}(n)$
   <br>
 

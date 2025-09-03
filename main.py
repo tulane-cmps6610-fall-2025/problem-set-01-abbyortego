@@ -51,15 +51,34 @@ class Result:
     def __repr__(self):
         return('longest_size=%d left_size=%d right_size=%d is_entire_range=%s' %
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
-    
-# should this be parallelizable?
+
+seq_count = Result(0, 0, 0, False)
+
 def longest_run_recursive(mylist, key):
     # TODO
     print('sequencing %s' % mylist)
+
     if len(mylist)==1:
-        return mylist
+        return mylist[0]
+        # seq_count.left_size+=1
+        # seq_count.right_size+=1
+        # seq_count.longest_size+=1
     else:
-        # seq_count = Result(0, 0, 0, False)
+        if longest_run_recursive(mylist[:len(mylist)//2], key)==key:
+            seq_count.left_size += 1
+        if longest_run_recursive(mylist[len(mylist)//2:], key)==key:
+            seq_count.right_size += 1
+        return max(seq_count.left_size, seq_count.right_size)
+
+        # print(longest_run_recursive(mylist[:len(mylist)//2], key)==key)
+        # print(longest_run_recursive(mylist[len(mylist)//2:], key)==key)
+
+        # # if longest_run_recursive(mylist[:len(mylist)//2], key) == longest_run_recursive(mylist[len(mylist)//2:], key):
+        # #     return "huh"                                                                       
+
+        # seq_count.left_size += longest_run_recursive(mylist[:len(mylist)//2], key)
+        # seq_count.right_size += longest_run_recursive(mylist[len(mylist)//2:], key)
+        # return max(seq_count.left_size, seq_count.right_size)
 
         # if longest_run_recursive(mylist[len(mylist)//2:], key)==key:
         #     print(key)
@@ -71,8 +90,6 @@ def longest_run_recursive(mylist, key):
         # seq_count.right_size += longest_run_recursive(mylist[len(mylist)//2:], key)
         # L_s, R_s = [longest_run_recursive(mylist[len(mylist)//2:], key), longest_run_recursive(mylist[:len(mylist)//2], key)]
         # longest_run_recursive(mylist[:len(mylist)//2], key) + longest_run_recursive(mylist[len(mylist)//2:], key)
-
-        return 
     #
 #
 print(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12))
