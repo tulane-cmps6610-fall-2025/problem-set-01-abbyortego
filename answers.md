@@ -62,9 +62,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
   - 2c.
     - $W(n)$
-      - Branching factor is $a\%b$
-      - So $W(n) = \mathcal{O}(\log_{a\%b}n)$, where $n$ would the size of a and b? 
-    - No parallization so $S(n)$ would be the same as $W(n)  = \mathcal{O}(\log_{a\%b}n)$
+      - Branching factor is $a \mathbin{\%} b$
+      - So $W(n) = \mathcal{O}(\log_{a \mathbin{\%} b}n)$, where $n$ would the size of a and b? 
+    - No parallization so $S(n)$ would be the same $S(n)  = \mathcal{O}(\log_{a \mathbin{\%} b}n)$
 
 3. **Parallelism and recursion**
 *The superscripts refer to the lines of code in `main.py`!*

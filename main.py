@@ -53,16 +53,12 @@ class Result:
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
 
 seq_count = Result(0, 0, 0, False)
-
 def longest_run_recursive(mylist, key):
     # TODO
     print('sequencing %s' % mylist)
 
     if len(mylist)==1:
         return mylist[0]
-        # seq_count.left_size+=1
-        # seq_count.right_size+=1
-        # seq_count.longest_size+=1
     else:
         if longest_run_recursive(mylist[:len(mylist)//2], key)==key:
             seq_count.left_size += 1
@@ -72,7 +68,7 @@ def longest_run_recursive(mylist, key):
         return seq_count.longest_size
     #
 #
-print(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12))
+# print(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12))
 
 ## Feel free to add your own tests here.
 def test_longest_run():
